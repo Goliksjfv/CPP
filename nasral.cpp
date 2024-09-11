@@ -5,5 +5,6 @@ int main()
 { 
     int a= 2, b=4; 
     cout<<"ueban"<<endl; 
+    int s=4;
     return 0; 
 }
