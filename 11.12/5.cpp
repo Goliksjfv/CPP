@@ -12,13 +12,13 @@ bool inCircle(double x, double y)
 bool inLines(double x, double y){
     double perx=-2/3;
     double pery=2/3;
-    return ((y<pery && x>=(y/2)-1 && x<=-y) || (y>pery && x<=(y/2)-1 && x>=-y) || (x==perx && y==pery));
+    return ((y<pery && x>=(y/2)-1 && x<-y) || (y>pery && x<=(y/2)-1 && x>-y) || (x==perx && y==pery));
 }
 
 bool IsPointInArea(double x, double y){
     double perx=-2/3;
     double pery=2/3;
-    return ((inCircle(x,y) && inLines(x,y) && y>=pery) || (!inCircle(x,y) && inLines(x,y) && y<=pery));
+    return ((inCircle(x,y) && inLines(x,y) && y>pery) || (!inCircle(x,y) && inLines(x,y) && y<pery));
 }
 
 int main()
